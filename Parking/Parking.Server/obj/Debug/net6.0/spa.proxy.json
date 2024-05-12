@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5173",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\clebe\\OneDrive\\Área de Trabalho\\Estaciona\\Parking\\Parking.Server\\..\\parking.client",
+"MaxTimeoutInSeconds": "120"
+}
+}

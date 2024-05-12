@@ -1,0 +1,61 @@
+﻿#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+body {
+    background-image: url('assets/parkback.png');
+    background-size: cover;
+}
+
+.menu {
+    background-color: rgb(0,0,0, 0.5);
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 15px;
+    padding-bottom: 50px;
+    box-shadow: 10px 10px 5px rgb(0,0,0);
+}
+
+div {
+    color: aliceblue
+}
+
+
+tr:nth-child(even) {
+    background: #F2F2F2;
+}
+
+tr:nth-child(odd) {
+    background: #FFF;
+}
+
+table {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: dimgray;
+    margin: auto;
+    border: 5px solid;
+    border-color: rgb(0,0,0, 0.8);
+    border-radius: 5px;
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.space-occupied {
+    border: 1px solid red;
+    color: black;
+    background-color: #d86b6b;
+}
+
+.space-empty {
+    border: 1px solid green;
+    color: black;
+    background-color: #6bd87b;
+}

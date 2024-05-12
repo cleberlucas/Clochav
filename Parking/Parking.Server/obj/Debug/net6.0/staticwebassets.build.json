@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "ovSOk80+AyRJ2z2SaLcUREy4CWTs4NxAmumaHq0mjwg=",
+  "Source": "Parking.Server",
+  "BasePath": "_content/Parking.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\clebe\\OneDrive\\Área de Trabalho\\Estaciona\\Parking\\parking.client\\parking.client.esproj",
+      "Version": 2,
+      "Source": "parking.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
