@@ -1,9 +1,13 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+import json
+
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456@localhost/parking'
+app.config['SQLALCHEMY_DATABASE_URI'] = config['database_uri']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -49,5 +53,8 @@ def parking_space_specific(floor, spot):
         db.session.commit()
         return jsonify({'message': 'Parking Space Deleted Successfully'})
 
-if __name__ == '__main__':
+def main():
     app.run(debug=True)
+
+if __name__ == '__main__':
+    main()

@@ -4,7 +4,12 @@ namespace Parking.Server.Models
     {
         public int Floor { get; set; }
 
-        public char Spot { get ; set; }
+
+        private char spot { get ; set; }
+        public char Spot { 
+            get => spot.ToString().ToUpper().ToCharArray()[0];
+            set => spot = value; 
+        }
 
         public bool Used { get; set; }
 

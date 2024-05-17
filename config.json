@@ -1,0 +1,5 @@
+{
+  "stream_url": "http://192.168.170.248:81/stream",
+  "api_url": "http://127.0.0.1:5000",
+  "database_uri": "mysql+mysqlconnector://root:123456@localhost/parking"
+}

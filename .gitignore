@@ -8,3 +8,5 @@
 /Parking/Parking.Server/bin
 /Media/Copywriting
 /Versions
+/Parking/Parking.Server/obj/Debug/net6.0
+/__pycache__

@@ -16,7 +16,7 @@ namespace Parking.Server.Controllers
             _spotService = spotService;
         }
 
-        [HttpGet("", Name = "Space")]
+        [HttpGet("Space", Name = "Space")]
         public async Task<IEnumerable<Space>> GetSpot()
         {
             var result = new List<Space>();
@@ -26,7 +26,7 @@ namespace Parking.Server.Controllers
             return result;
         }
 
-        [HttpGet("Example", Name = "SpotExample")]
+        [HttpGet("Space/Example", Name = "SpaceExample")]
         public IEnumerable<Space> GetSpotExample()
         {
             var result = new List<Space>();

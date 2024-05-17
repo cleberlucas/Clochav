@@ -13,27 +13,24 @@ function App() {
     const contents = spaces === undefined
         ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
         : <table className="table table-striped" aria-labelledby="tabelLabel">
-            <thead>
-                <tr>
-                    <th>Floor</th>
-                    <th>Space</th>
-                    <th>Reserve</th>
-                </tr>
-            </thead>
-            <tbody>
-                {spaces.map(space =>
-                    <tr key={space.floor}>
-                        <td>{space.floor}</td>
-                        <td>{space.space}</td>
-                        <td className={space.used ? 'space-occupied' : 'space-empty'}>{space.used ? 'OCCUPIED' : 'VACANT'}</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>;
+               
+            <tr>
+                <th>FLOOR</th>
+                {spaces.map(space => <td>{space.floor}</td>)}
+            </tr>
+            <tr>
+                <th>SPOT</th>
+                {spaces.map(space =><td>{space.spot}</td>)}
+            </tr>
+            <tr>
+                <th>RESERVE</th>
+                {spaces.map(space =><td className={space.used ? 'space-occupied' : 'space-empty'}>{space.used ? 'OCCUPIED' : 'VACANT'}</td>)}
+            </tr>          
+        </table>
 
     return (
         <div className="menu">
-            <h1 id="tabelLabel">Parking Vacancies Monitor</h1>
+            <h1 id="tabelLabel">MONITOR</h1>
             {contents}
         </div>
     );
@@ -46,7 +43,8 @@ function App() {
 
     async function populateParkingData() {
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/parking/space');
+            //const response = await fetch('https://localhost:7124/Parking/Space/Example');
+            const response = await fetch('https://localhost:7124/Parking/Space');
             const data = await response.json();
             setParkings(data);
 
@@ -58,7 +56,7 @@ function App() {
     function startParkingDataPolling() {
         const intervalId = setInterval(() => {
             populateParkingData();
-        }, 1000);
+        }, 500);
 
         return () => clearInterval(intervalId);
     }
