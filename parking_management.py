@@ -172,7 +172,7 @@ async def integrate_handler_async():
             floor = space_used_key[0]
             space = space_used_key[1]
             await space_update_async(floor, space, used)
-                print(f"integrate_handler_async: Floor {floor} Space {space} Updated to {'OCCUPIED' if used else 'VACANT'}")
+            print(f"integrate_handler_async: Floor {floor} Space {space} Updated to {'OCCUPIED' if used else 'VACANT'}")
         
         last_state_space_used = _space_used.copy()
         _space_used = _space_default.copy()
